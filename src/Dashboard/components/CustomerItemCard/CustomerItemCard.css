@@ -1,0 +1,130 @@
+
+.item-card{
+    position: relative;
+    padding: 1vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vh;
+    color: var(--text-black);
+    border-top: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+}
+
+.item-card_details{
+    position: relative;
+    width: 15vw;
+    padding: 0.1vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-card_details_value{
+
+}
+
+.item-card_details_name{
+    position: relative;
+    display: grid;
+    grid-template-columns: max-content 10vw;
+    grid-template-rows: auto auto;
+    gap: 0.5vh;
+    grid-template-areas: 
+        "name-logo name-name"
+        "name-logo name-email"
+    ;
+}
+
+.item-card_details_name_logo{
+    grid-area: name-logo;
+    position: relative;
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-card_details_name_logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.item-card_details_name_name{
+    grid-area: name-name;
+    color: var(--text-black);
+    word-break: break-all;
+    font-weight: 500;
+}
+
+.item-card_details_name_email{
+    grid-area: name-email;
+    color: var(--item-light-grey);
+    word-break: break-all;
+}
+
+.item-card_details_crn{
+    font-weight: 500;
+}
+
+.item-card_details_group{
+    color: var(--item-light-grey);
+}
+
+.item-card_details_billing{
+    color: var(--item-light-grey);
+}
+
+.item-card_details_action{
+    color: var(--item-grey);
+}
+
+.item-card_details_action{
+    justify-content: flex-end;
+}
+
+.item-card_details_action_value{
+    margin: 0px 3vw;
+    cursor: pointer;
+}
+
+.item-card_details_action_modal{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    width: 8vw;
+    top: 0px;
+    right: 100px;
+    border-radius: 0.5vh;
+    overflow: hidden;
+    background: var(--white);
+    font-size: var(--s-font);
+}
+
+.item-card_details_action_option{
+    padding: 1vh;
+    width: 100%;
+    max-width: 14vw;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.item-card_details_action_option:hover{
+    color: var(--nav-hero-text);
+    background: var(--green);
+}
+
+.item-card_details_action_option_remove{
+    color: rgba(242, 29, 57);
+}
+
+.item-card_details_action_option_remove:hover{
+    background: rgba(242, 29, 57,0.2);
+    color: rgba(242, 29, 57);
+}
