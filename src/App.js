@@ -1,13 +1,16 @@
-import './App.css';
-import Dashboard from './Dashboard/Dashboard';
-import Navbar from './Navbar/Navbar';
 import "./App.css";
+import Dashboard from "./Dashboard/Dashboard";
+import Navbar, { MobileSidebar } from "./Navbar/Navbar";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [openSidebar, setOpenSidebar] = useState(false);
   return (
     <div className="container">
-      <Navbar/>
-      <Dashboard/>
+      {{openSidebar} && <MobileSidebar openSidebar={openSidebar}/>}
+      <Navbar setOpenSidebar={setOpenSidebar}/>
+      <Dashboard />
     </div>
   );
 }
